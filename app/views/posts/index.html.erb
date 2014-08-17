@@ -1,2 +1,9 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h1>Posts</h1>
+<% if @posts.any? %>
+	<% @posts.each do |post| %>
+		<%= post.text %>
+		<%= "Posted by #{post.user.email}" %>
+	<% end %>
+<% else %>
+	<p>Nothing have been posted</p>
+<% end %>

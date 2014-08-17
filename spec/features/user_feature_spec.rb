@@ -18,7 +18,7 @@ describe 'User system' do
 			login_as marco
 		end
 
-		it 'can sign in' do
+		it 'Goes to the posts page after sign in' do
 			visit ('/')
 			expect(current_path).to eq '/posts'
 		end
